@@ -190,3 +190,13 @@ if __name__ == "__main__":
         res = tokenizer.tokenize(text)
         print(f'# tokens in the text: {len(res)}')
         print(f'tokenized text: {res}')
+
+    # results
+    # BBPE
+    # # tokens in the text: 120
+    # tokenized text: ['c3', 'a3', 'c4', 'a3', 'c4', 'ac', 'c3', 'a8', 'c4', 'a7', 'c2', 'b9', 'c3', 'a3', 'c4', 'a3', 'c4', 'ae', 'c3', 'a7', 'c2', 'a9', 'c2', 'ba', 'c3', 'a3', 'c4', 'a3', 'c4', 'a6', 'c3', 'a3', 'c4', 'a3', 'c5', '81', 'c3', 'a3', 'c4', 'a3', 'c2', 'ae', 'c3', 'a3', 'c4', 'a3', 'c2', 'a7', 'c3', 'a4', 'c2', 'bd', 'c4', 'b7', 'c3', 'a3', 'c4', 'a3', 'c4', 'ad', 'c3', 'a9', 'c2', 'a3', 'c5', '81', 'c3', 'a3', 'c4', 'a3', 'c2', 'b9', 'c3', 'a3', 'c4', 'a3', 'c2', 'a6', 'c3', 'a3', 'c4', 'a4', 'c4', 'a4', 'c3', 'a3', 'c4', 'a3', 'c4', 'a6', 'c3', 'a3', 'c4', 'a3', 'c4', 'a6', 'c3', 'a3', 'c4', 'a3', 'c2', 'a7', 'c3', 'a3', 'c4', 'a3', 'c4', 'bb', 'c3', 'a3', 'c4', 'a3', 'c4', 'ad', 'c3', 'af', 'c2', 'bc', 'c5', '81']
+    # BPE
+    # # tokens in the text: 60
+    # tokenized text: ['ã', 'ģ', '<|unk|>', '<|unk|>', '<|unk|>', '<|unk|>', 'ã', 'ģ', '<|unk|>', '<|unk|>', '<|unk|>', 'º', 'ã', 'ģ', 'Ħ', 'ã', 'ģ', 'Ł', 'ã', 'ģ', '<|unk|>', 'ã', 'ģ', '<|unk|>', 'ä', '½', '<|unk|>', 'ã', 'ģ', 'ĭ', 'é', '£', 'Ł', 'ã', 'ģ', '<|unk|>', 'ã', 'ģ', '<|unk|>', 'ã', 'Ĥ', 'Ĥ', 'ã', 'ģ', 'Ħ', 'ã', 'ģ', 'Ħ', 'ã', 'ģ', '<|unk|>', 'ã', 'ģ', 'Ļ', 'ã', 'ģ', 'ĭ', '<|unk|>', '¼', 'Ł']
+    # => BBPE longer sequence. BBPE no unk token. 
+    # => can't figure out why japanese characters become weird after using pre-tokenizer.. #to-do
